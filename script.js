@@ -3,8 +3,7 @@ let counter = localStorage.getItem('waffCounter') ? parseInt(localStorage.getIte
 document.getElementById('counter').innerText = counter;
 
 // Переменные для анимации
-const frameWidth = 112; // Ширина одного кадра спрайта
-const totalFrames = 5; // Общее количество кадров в спрайте
+const totalFrames = 5; // Общее количество кадров
 let currentFrame = 0;
 
 // Функция для обработки кликов
@@ -28,9 +27,9 @@ function animateSprite() {
     const interval = setInterval(() => {
         if (currentFrame >= totalFrames) {
             clearInterval(interval);
-            waffImage.style.transform = 'translateX(0)'; // Возвращаемся к первому кадру
+            waffImage.src = `sprites/waff1.png`; // Возвращаемся к первому кадру
         } else {
-            waffImage.style.transform = `translateX(-${currentFrame * frameWidth}px)`;
+            waffImage.src = `sprites/waff${currentFrame + 1}.png`;
             currentFrame++;
         }
     }, 200); // Настройте скорость анимации
