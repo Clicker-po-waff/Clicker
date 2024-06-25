@@ -2,22 +2,36 @@
 let counter = localStorage.getItem('waffCounter') ? parseInt(localStorage.getItem('waffCounter')) : 0;
 document.getElementById('counter').innerText = counter;
 
+// Переменные для анимации
+const frameWidth = 112; // Ширина одного кадра спрайта
+const totalFrames = 5; // Общее количество кадров в спрайте
+let currentFrame = 0;
+
 // Функция для обработки кликов
 function handleClick() {
     counter++;
     localStorage.setItem('waffCounter', counter);
     document.getElementById('counter').innerText = counter;
 
-    // Запуск анимации GIF
-    let waffImage = document.getElementById('waff');
-    waffImage.src = "images/waff.gif";
-    
-    // Вернуть статичное изображение после завершения анимации (например, через 2 секунды)
-    setTimeout(() => {
-        waffImage.src = "images/waff_static.png";
-    }, 1000); // Настройте время в соответствии с длительностью вашего GIF
+    // Запуск анимации спрайта
+    currentFrame = 0;
+    animateSprite();
 
     if (counter === 1000000) {
-        alert('Тебе было скучно и ты погладил вафф 1 миллион раз? Уф сигма'');
+        alert('Тебе было скучно и ты погладил вафф 1 миллион раз? Уф сигма');
     }
+}
+
+// Функция для анимации спрайта
+function animateSprite() {
+    const waffImage = document.getElementById('waff');
+    const interval = setInterval(() => {
+        if (currentFrame >= totalFrames) {
+            clearInterval(interval);
+            waffImage.style.transform = 'translateX(0)'; // Возвращаемся к первому кадру
+        } else {
+            waffImage.style.transform = `translateX(-${currentFrame * frameWidth}px)`;
+            currentFrame++;
+        }
+    }, 200); // Настройте скорость анимации
 }
