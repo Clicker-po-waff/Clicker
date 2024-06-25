@@ -8,7 +8,14 @@ function handleClick() {
     localStorage.setItem('waffCounter', counter);
     document.getElementById('counter').innerText = counter;
 
+    // Запуск анимации GIF
+    let waffImage = document.getElementById('waff');
+    waffImage.src = ""; // Сброс GIF для перезапуска анимации
+    setTimeout(() => {
+        waffImage.src = "images/waff.gif";
+    }, 10);
+
     if (counter === 1000000) {
-        alert('Нахуя ты нажал на вафф 1 миллион раз?');
+        alert('Тебе было скучно и ты погладил вафф 1 миллион раз? Уф сигма');
     }
 }
