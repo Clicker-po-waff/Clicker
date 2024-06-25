@@ -21,9 +21,6 @@ body {
 
 #waff {
     cursor: pointer;
-    width: 560px; /* Общее количество пикселей по ширине (5 кадров * 112 пикселей) */
-    height: 112px; /* Высота одного кадра */
-    background-image: url('images/waff_sprite.png');
-    background-repeat: no-repeat;
-    animation: none;
+    width: 112px;
+    height: 112px;
 }
