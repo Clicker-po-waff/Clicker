@@ -5,7 +5,6 @@ document.getElementById('counter').innerText = counter;
 // Переменные для анимации
 const totalFrames = 5; // Общее количество кадров
 let currentFrame = 0;
-const frameDuration = 200; // Длительность каждого кадра в миллисекундах (0.5 секунды)
 
 // Функция для обработки кликов
 function handleClick() {
@@ -33,5 +32,5 @@ function animateSprite() {
             waffImage.src = `sprites/waff${currentFrame + 1}.png`;
             currentFrame++;
         }
-    }, frameDuration); // Настройте скорость анимации
+    }, 99999999); // Настройте скорость анимации
 }
