@@ -1,0 +1,19 @@
+body {
+    background-color: pink;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#waff {
+    cursor: pointer;
+    width: 200px;
+    height: auto;
+}
