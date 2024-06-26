@@ -3,13 +3,17 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
 }
 
 #waff-container {
@@ -17,6 +21,7 @@ body {
     height: 112px; /* Высота одного кадра */
     overflow: hidden;
     display: inline-block;
+    margin-bottom: 50px; /* Расстояние между изображением и текстом */
 }
 
 #waff {
