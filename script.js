@@ -32,5 +32,5 @@ function animateSprite() {
             waffImage.src = `sprites/waff${currentFrame + 1}.png`;
             currentFrame++;
         }
-    }, 20); // Настройте скорость анимации
+    }, 50); // Настройте скорость анимации
 }
