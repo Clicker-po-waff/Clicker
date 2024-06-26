@@ -17,8 +17,8 @@ body {
 }
 
 #waff-container {
-    width: 112px; /* Ширина одного кадра */
-    height: 112px; /* Высота одного кадра */
+    width: 200px; /* Ширина одного кадра */
+    height: 200px; /* Высота одного кадра */
     overflow: hidden;
     display: inline-block;
     margin-bottom: 50px; /* Расстояние между изображением и текстом */
@@ -26,6 +26,7 @@ body {
 
 #waff {
     cursor: pointer;
-    width: 112px;
-    height: 112px;
+    width: 200px;
+    height: 200px;
+    outline: none; /* Убираем синий квадрат */
 }
